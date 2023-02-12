@@ -48,8 +48,8 @@
 
     // * View Book Details Start
     $(function(){
-      $('#view_modal').on('show.bs.modal', function(e){
-        var button = $(e.relatedTarget);
+      $('#view_modal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);
         var view_id = button.data('id');
         var view_title = button.data('title');
         var view_author = button.data('author');
@@ -66,6 +66,54 @@
       })
     })
     // * View Book Details End
+
+    // * Edit Book Details Start
+    $(function(){
+      $('#edit_modal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget);
+        var edit_id = button.data('id');
+        var edit_title = button.data('title');
+        var edit_author = button.data('author');
+        var edit_date = button.data('date');
+        var edit_publisher = button.data('publisher');
+        var edit_genre = button.data('genre');
+
+        var modal = $(this);
+        modal.find('#edit_id').val(edit_id);
+        modal.find('#edit_title').val(edit_title);
+        modal.find('#edit_author').val(edit_author);
+        modal.find('#edit_date').val(edit_date);
+        modal.find('#edit_publisher').val(edit_publisher);
+        modal.find('#edit_genre').val(edit_genre);
+      })
+    })
+    // * Edit Book Details End
+
+    // * Edit Save
+    $(document).on('click', '#edit_save', function(){
+      $.ajax({
+        url: 'edit.php',
+        type: 'POST',
+        cache: false,
+        data: {
+          edit_id : $('#edit_id').val(),
+          edit_title : $('#edit_title').val(),
+          edit_author : $('#edit_author').val(),
+          edit_date : $('#edit_date').val(),
+          edit_publisher : $('#edit_publisher').val(),
+          edit_genre : $('#edit_genre').val()
+        },
+        success: function(dataResult){
+          var data = JSON.parse(dataResult)
+          if(data.statusCode == 200){
+            alert('Updated successfully!');
+            location.reload();
+          }else if(data.statusCode == 201){
+            alert('Error!');
+          }
+        }
+      })
+    })
 
   })        
 </script>

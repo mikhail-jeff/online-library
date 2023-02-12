@@ -128,6 +128,56 @@
       </div>
     </div>
     <!--View Modal End -->
+
+    <!-- Edit Modal Start -->
+    <div class='modal fade' id='edit_modal' role='dialog'>
+      <div class='modal-dialog modal-md'>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h5>Edit Book Details</h5>
+            </div>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <form>
+              <div>
+                <input type="hidden" name="edit_id" id="edit_id" class='form-control mb-2' >
+              </div>
+              <div>
+                <label for="">Title:</label>
+                <input type="text" name="edit_title" id="edit_title" class='form-control mb-2' required>
+              </div>
+              <div>
+                <label for="">Author:</label>
+                <input type="text" name="edit_author" id="edit_author" class='form-control mb-2' required>
+              </div>
+              <div>
+                <label for="">Date:</label>
+                <input type="date" name="edit_date" id="edit_date" class='form-control mb-2' required>
+              </div>
+              <div>
+                <label for="">Publisher:</label>
+                <input type="text" name="edit_publisher" id="edit_publisher" class='form-control mb-2' required>
+              </div>
+              <div>
+                <label for="">Genre:</label>
+                <select  type="text" name="edit_genre" id="edit_genre" class='form-control mb-2' required>
+                  <option value="Romance">Romance</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Drama">Drama</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type='submit' class='btn btn-success' name='edit_save' id='edit_save'>Save</button>
+            <button class='btn btn-danger' data-bs-dismiss='modal'>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Modal End -->
   </div>
 </body>
 </html>

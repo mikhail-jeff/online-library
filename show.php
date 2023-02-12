@@ -15,6 +15,7 @@
     <td><?php echo $row['publisher']; ?></td>
     <td><?php echo $row['genre']; ?></td>
     <td>
+      <!-- View Button -->
       <button class='btn btn-primary' 
         data-bs-toggle='modal' 
         data-bs-target='#view_modal' 
@@ -26,7 +27,21 @@
         data-genre='<?php echo $row['genre']; ?>'>
         View
       </button>
-      <button class='btn btn-success'>Edit</button>
+
+      <!-- Edit Button -->
+      <button class='btn btn-success' 
+        data-bs-toggle='modal' 
+        data-bs-target='#edit_modal' 
+        data-id='<?php echo $row['id']; ?>' 
+        data-title='<?php echo $row['title']; ?>' 
+        data-author='<?php echo $row['author']; ?>' 
+        data-date='<?php echo $row['date']; ?>' 
+        data-publisher='<?php echo $row['publisher']; ?>' 
+        data-genre='<?php echo $row['genre']; ?>'>
+        Edit
+      </button>
+
+      <!-- Delete Button -->
       <button class='btn btn-danger'>Delete</button>
     </td>
   </tr>
