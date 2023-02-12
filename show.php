@@ -14,9 +14,11 @@
     <td><?php echo $row['date']; ?></td>
     <td><?php echo $row['publisher']; ?></td>
     <td><?php echo $row['genre']; ?></td>
-    <td>
+    <td class='d-flex gap-3 justify-content-center'>
       <!-- View Button -->
-      <button class='btn btn-primary' 
+      <button
+        type='button'
+        class='btn btn-primary' 
         data-bs-toggle='modal' 
         data-bs-target='#view_modal' 
         data-id='<?php echo $row['id']; ?>' 
@@ -29,7 +31,9 @@
       </button>
 
       <!-- Edit Button -->
-      <button class='btn btn-success' 
+      <button
+        type='button'
+        class='btn btn-success' 
         data-bs-toggle='modal' 
         data-bs-target='#edit_modal' 
         data-id='<?php echo $row['id']; ?>' 
@@ -42,7 +46,13 @@
       </button>
 
       <!-- Delete Button -->
-      <button class='btn btn-danger'>Delete</button>
+      <button 
+        class='btn btn-danger' 
+        id='delete' 
+        data-id='<?php echo $row['id']; ?>'
+        >
+        Delete
+      </button>
     </td>
   </tr>
 

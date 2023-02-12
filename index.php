@@ -13,9 +13,9 @@
   <title>Online Library</title>
 </head>
 <body>
-  <div class="container mt-4">
+  <div class="container mt-4 border-box">
     <div class='row'>
-      <h2 class='col-9'>Online Library</h2>
+      <h2 class='col-9 text-uppercase fw-bold'>Online Library</h2>
       <!-- Trigger Button For Add Book Modal-->
       <button type='button' class='btn btn-success col-3' data-bs-toggle='modal' data-bs-target='#add_modal'>Add New Books</button>
     </div>
@@ -23,12 +23,12 @@
       <table class='table table-bordered'>
         <thead class='bg-warning'>
           <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Date</th>
-            <th>Publisher</th>
-            <th>Genre</th>
-            <th>Actions</th>
+            <th class='text-center text-uppercase'>Title</th>
+            <th class='text-center text-uppercase'>Author</th>
+            <th class='text-center text-uppercase'>Date</th>
+            <th class='text-center text-uppercase'>Publisher</th>
+            <th class='text-center text-uppercase'>Genre</th>
+            <th class='text-center text-uppercase'>Actions</th>
           </tr>
         </thead>
         <tbody id='table'>

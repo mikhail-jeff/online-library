@@ -89,7 +89,7 @@
     })
     // * Edit Book Details End
 
-    // * Edit Save
+    // * Edit Save Start
     $(document).on('click', '#edit_save', function(){
       $.ajax({
         url: 'edit.php',
@@ -114,6 +114,30 @@
         }
       })
     })
+    // * Edit Save End
 
+    // * Delete Start
+    $(document).on('click', '#delete', function(){
+      var $rowtodelete = $(this).parent().parent();
+      $.ajax({
+        url: 'delete.php',
+        type: 'POST',
+        cache: false,
+        data:{
+          delete_item: $(this).attr('data-id')
+        },
+        success:function(dataResult){
+          var data = JSON.parse(dataResult)
+          if(data.statusCode == 200){
+            $rowtodelete.fadeOut();
+            // location.reload();
+          }else if(data.statusCode == 201){
+            alert('Error!');
+          }
+        }
+      })
+
+    })
+    // * Delete End
   })        
 </script>
