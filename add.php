@@ -5,7 +5,7 @@
   $add_title = $_POST['add_title'];
   $add_author = $_POST['add_author'];
   $add_date = $_POST['add_date'];
-  $add_pub = $_POST['add_pub'];
+  $add_publisher = $_POST['add_publisher'];
   $add_genre = $_POST['add_genre'];
 
   $sql = "INSERT INTO `books`
@@ -21,7 +21,7 @@
     '$add_title',
     '$add_author',
     '$add_date',
-    '$add_pub',
+    '$add_publisher',
     '$add_genre'
     )
     ";

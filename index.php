@@ -62,7 +62,7 @@
               </div>
               <div>
                 <label for="">Publisher:</label>
-                <input type="text" name="add_pub" id="add_pub" class='form-control mb-2' required>
+                <input type="text" name="add_publisher" id="add_publisher" class='form-control mb-2' required>
               </div>
               <div>
                 <label for="">Genre:</label>
@@ -82,6 +82,52 @@
       </div>
     </div>
     <!--Add New Book Modal End -->
+
+    <!-- View Modal Start -->
+    <div class='modal fade' id='view_modal' role='dialog'>
+      <div class='modal-dialog modal-md'>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h5>View Book Details</h5>
+            </div>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <form>
+              <div>
+                <label for="">Title:</label>
+                <input type="text" name="view_title" id="view_title" class='form-control mb-2' disabled>
+              </div>
+              <div>
+                <label for="">Author:</label>
+                <input type="text" name="view_author" id="view_author" class='form-control mb-2' disabled>
+              </div>
+              <div>
+                <label for="">Date:</label>
+                <input type="date" name="view_date" id="view_date" class='form-control mb-2' disabled>
+              </div>
+              <div>
+                <label for="">Publisher:</label>
+                <input type="text" name="view_publisher" id="view_publisher" class='form-control mb-2' disabled>
+              </div>
+              <div>
+                <label for="">Genre:</label>
+                <select  type="text" name="view_genre" id="view_genre" class='form-control mb-2' disabled>
+                  <option value="Romance">Romance</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Drama">Drama</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class='btn btn-danger' data-bs-dismiss='modal'>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--View Modal End -->
   </div>
 </body>
 </html>
