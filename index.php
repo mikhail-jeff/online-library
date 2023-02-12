@@ -19,6 +19,11 @@
       <!-- Trigger Button For Add Book Modal-->
       <button type='button' class='btn btn-success col-3' data-bs-toggle='modal' data-bs-target='#add_modal'>Add New Books</button>
     </div>
+
+    <div class='mt-2'>
+      <input type="text" name="" id="myInput" class='form-control w-25' placeholder='Search...'>
+    </div>
+
     <div class='mt-4'>
       <table class='table table-bordered'>
         <thead class='bg-warning'>
